@@ -356,8 +356,7 @@ IncludeOptional conf.d/*.conf
 NameVirtualHost *:80
 <Directory "/deploy/*">
   AllowOverride All
-  Order allow,deny
-  Allow from all
+  Require all granted
 </Directory>
 
 <virtualHost *:80>
