@@ -4,6 +4,14 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
+package "php"
+template "/etc/php.d/php.local.ini" do
+	source "php.local.ini.erb"
+	owner 'root'
+	group 'root'
+	mode 0644
+end
+
 package "httpd"
 service "httpd" do
 	action [:enable, :start]
